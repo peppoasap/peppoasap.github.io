@@ -1,0 +1,154 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #040f16;
+  color: #fbfbff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  display: flex;
+  flex: 1;
+  background-color: rgba(4,15,22, 0.2);
+  position: sticky;
+  top: 0;
+}
+
+nav{
+  display: flex;
+  flex: 1;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+ul li{
+  text-transform: uppercase;
+}
+
+a{
+  color: #fbfbff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.logo{
+  font-weight: 400;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex: 0.5;
+}
+
+.main-title{
+  align-self: center;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+#projects{
+  justify-content: space-around;
+}
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: 1s ease-in-out;
+  color: whitesmoke;
+  min-height: 16em;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.project-container:hover{
+  -webkit-filter: grayscale(25%);
+  color: #fbfbff;
+  opacity: 1;
+}
+
+.left{
+  align-self: flex-start;
+  margin-left: -2em;
+}
+
+.right{
+  align-self: flex-end;
+  margin-right: -2em;
+}
+
+.tech{
+  background-color: #275dad;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin-left: 1em;
+  color: white;
+}
+
+.tech-container{
+  display: flex;
+  justify-content: center;
+}
+
+footer{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+#debright-space-program{
+  background-image: url("../img/debright-space-program.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 19em;
+}
+
+#socketchat{
+  background-image: url("../img/socketchat.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+#karonte{
+  background-image: url("../img/karonte-portfolio.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+#new-tab-page{
+  background-image: url("../img/new-tab-page2.png"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18.5em;
+}
