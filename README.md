@@ -1,4 +1,2 @@
-## Visit my portfolio at [http://peppoasap.me]
-
-
+## Visit my portfolio at http://www.peppoasap.me
 
