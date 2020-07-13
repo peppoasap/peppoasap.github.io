@@ -32,7 +32,6 @@ body{
 #about-me{
   background-image: url('../img/low-poly-mountain.jpg');
   background-position: right;
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -245,6 +244,10 @@ footer{
 }
 
 @media screen and (max-width: 768px){
+  #about-me{
+    background-size: cover;
+  }
+  
   .main-title{
     text-align: center;
   }
