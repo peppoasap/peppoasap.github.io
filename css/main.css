@@ -32,6 +32,7 @@ body{
 #about-me{
   background-image: url('../img/low-poly-mountain.jpg');
   background-position: right;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
