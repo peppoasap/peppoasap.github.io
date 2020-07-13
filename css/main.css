@@ -7,6 +7,7 @@ body{
   background-color: #040f16;
   color: #fbfbff;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .cursor{
@@ -29,7 +30,9 @@ body{
 }
 
 #about-me{
-  background-color: #fbfbff;
+  background-image: url('../img/low-poly-mountain.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .logo{
@@ -37,18 +40,8 @@ body{
   font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  color: #275dad;
+  color: black;
   z-index: 100;
-}
-
-#about-exploration-svg{
-  width: auto;
-  height: 30em;
-  position: absolute;
-  bottom: 0;
-  opacity: 0.75;
-  align-self: center;
-  padding-left: 3rem;
 }
 
 .main-title{
@@ -56,7 +49,7 @@ body{
   font-size: 5rem;
   font-weight: 600;
   z-index: 100;
-  -webkit-text-stroke: 2px #040f16;
+  -webkit-text-stroke: 2px black;
   color: transparent;
   position: absolute;
   top: calc(50% - 2rem);
@@ -64,8 +57,10 @@ body{
 
 
 #projects{
+  padding: 1em;
   justify-content: space-around;
-  
+  background-color: white;
+  filter: invert(1);
 }
 
 .project-container{
@@ -75,43 +70,51 @@ body{
   width: 50%;
   padding: 1em;
   box-sizing: border-box;
+  filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-  -webkit-transition: 1s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   color: whitesmoke;
-  min-height: 16em;
+  min-height: 22em;
   text-align: center;
-  opacity: 0.5;
+  opacity: 1;
+  border-radius: 0.5em;
+  background: black;
+  margin-top: 1em;
+  cursor: pointer;
 }
 
 .project-container:hover{
-  -webkit-filter: grayscale(25%);
+  filter: grayscale(25%) invert(1);
+  -webkit-filter: grayscale(25%) invert(1);
   color: #fbfbff;
   opacity: 1;
+  background-color: transparent;
 }
 
 .left{
   align-self: flex-start;
-  margin-left: -2em;
 }
 
 .right{
   align-self: flex-end;
-  margin-right: -2em;
 }
 
 .tech{
-  background-color: #275dad;
+  background-color: #947c8c;
+  backdrop-filter: grayscale(0);
   width: auto;
   height: auto;
   padding: 0.5em;
   border-radius: 1em;
-  margin-left: 1em;
+  margin: 0.5em;
   color: white;
 }
 
 .tech-container{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #contacts{
@@ -131,7 +134,6 @@ body{
 }
 
 #contacts .flex-column{
-  width: 40%;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -155,7 +157,9 @@ body{
 
 #contacts .flex-column ul li{
   font-size: 1.25rem;
-  width: max-content;
+  width: fit-content;
+  max-width: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,45 +178,98 @@ footer{
   padding-bottom: 0.5rem;
   font-size: 0.8rem;
   font-style: italic;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-#my-pantry{
-  background-color: #000;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/my-pantry.png");
+#my-pantry:hover{
+  background: url("../img/my-pantry.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  
-  height: 19em;
 }
 
-#debright-space-program{
+#my-pantry:hover > :nth-child(1n){
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#debright-space-program:hover{
   background-image: url("../img/debright-space-program.png");
   background-position: center;
   background-size: contain;
-  background-repeat: repeat-x;
-  height: 19em;
+  background-repeat: no-repeat;
 }
 
-#socketchat{
+#debright-space-program:hover > :nth-child(1n){
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#socketchat:hover{
   background-image: url("../img/socketchat.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  color: black;
 }
 
-#karonte{
+#socketchat:hover > :nth-child(1n){
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#karonte:hover{
   background-image: url("../img/karonte-portfolio.jpg");
   background-position: center;
   background-size: contain;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
 }
 
-#new-tab-page{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/new-tab-page2.png"); 
+#karonte:hover > :nth-child(1n){
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#new-tab-page:hover{
+  background: url("../img/new-tab-page2.png"); 
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 18.5em;
+}
+
+#new-tab-page:hover > :nth-child(1n){
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px){
+  .main-title{
+    text-align: center;
+  }
+
+  .project-container{
+    width: 100%;
+  }
+
+  #contacts{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contacts-svg{
+    width: 100%;
+    height: auto;
+    align-self: center;
+  }
+  
+  #contacts .flex-column{
+      padding-left: 0;
+      align-items: center;
+
+  }
+
+  #contacts .flex-column ul{
+    align-items: center;
+  }
 }
